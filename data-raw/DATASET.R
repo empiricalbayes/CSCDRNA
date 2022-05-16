@@ -1,8 +1,7 @@
-## code to prepare `example_data` dataset goes here
-set.seed(100)
-sim.data <- BisqueRNA::SimulateData(n.ind=5, n.genes=100, n.cells=4,
-                                    cell.types=c("Endo","Podo","PT","DCT"),
-                                    avg.props= c(0.55,0.25,0.15,0.05))
+## code to prepare `DATASET` dataset goes here
+sim.data <- BisqueRNA::SimulateData(n.ind=5, n.genes=500, n.cells=4,
+                                    cell.types=c("CT1","CT2","CT3","CT4"),
+                                    avg.props= c(0.4,0.3,0.2,0.1))
 example_data=NULL
 example_data$bulk.matrix=Biobase::exprs(sim.data$bulk.eset)
 example_data$sc.counts.matrix=Biobase::exprs(sim.data$sc.eset)

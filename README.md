@@ -6,6 +6,11 @@ This approach provides accurate cell-type proportion estimation by incorporating
 
 ## Installation
 
+The R package is available on CRAN
+```r
+install.packages("CSCDRNA")
+```
+
 The package can be installed from the GitHub repository
 ```r
 devtools::install_github("empiricalbayes/CSCDRNA")

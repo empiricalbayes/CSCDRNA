@@ -1,6 +1,6 @@
 Package: CSCDRNA
 Title: Covariance Based Single-Cell Decomposition of Bulk Expression Data
-Version: 1.0.1
+Version: 1.0.2
 Authors@R: c(person("Ali", "Karimnezhad", role = c("aut", "cre", "ctb"),
                     email = "ali.karimnezhad@gmail.com"))
 Author: Ali Karimnezhad [aut, cre, ctb]

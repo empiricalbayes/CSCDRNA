@@ -6,8 +6,8 @@
 \title{Example data}
 \format{
 A list. Slot \strong{bulk.matrix} contains a sample bulk data matrix with
-500 rows (genes) and 5 columns (individuals). Slot \strong{sc.counts.matrix} contains
-a sample single-cell data matrix with 500 rows (genes) and 20 columns (a combination of
+100 rows (genes) and 5 columns (individuals). Slot \strong{sc.counts.matrix} contains
+a sample single-cell data matrix with 100 rows (genes) and 20 columns (a combination of
 cells assigned to 4 different cell types and 5 individuals). Slot \strong{individual.labels}
 contains individual labels in the single-cell data. Slot \strong{cell.type.labels} contains
 cell-type labels in the single-cell data. Slot \strong{sample.ids} contains sample ids in the

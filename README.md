@@ -11,7 +11,7 @@ The R package is available on CRAN
 install.packages("CSCDRNA")
 ```
 
-The package can be installed from the GitHub repository
+The package can also be installed from the GitHub repository
 ```r
 devtools::install_github("empiricalbayes/CSCDRNA")
 ```

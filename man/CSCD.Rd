@@ -21,8 +21,8 @@ CSCD(
 
 \item{min.p}{A percentage. This parameter is passed to the \code{\link[Seurat:FindAllMarkers]{Seurat::FindAllMarkers()}} function (Butler et al., 2019) to pick the most relevant genes to each cell-type cluster. Users may pick a number between 0.3 and 0.5 for best results. The higher the value, the more genes to be excluded from the analysis.}
 
-\item{markers}{Character string. A vector containing marker genes
-to be used in decomposition. If NULL is provided, the method will use all available genes for decomposition.}
+\item{markers}{A character vector containing marker genes
+to be used in decomposition. If NULL provided, the method will use all available genes for decomposition.}
 
 \item{cell.types}{Character string. A vector of cell-type labels.}
 

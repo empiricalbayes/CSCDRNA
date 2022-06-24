@@ -199,8 +199,8 @@ FindAllMarkers_filter.by.cluster=function(M){
 #' @param bulk.eset ExpressionSet with bulk data. Bulk RNA-seq data can be converted from a matrix with samples in columns and genes in rows to an ExpressionSet. See \code{\link{example_data}} for an example on how to create a bulk.eset object.
 #' @param sc.eset ExpressionSet with single-cell data. Single-cell data requires additional information in the ExpressionSet, specifically cell-type labels and individual labels. See \code{\link{example_data}} for an example on how to create a sc.eset object.
 #' @param min.p A percentage. This parameter is passed to the \code{\link[Seurat:FindAllMarkers]{Seurat::FindAllMarkers()}} function (Butler et al., 2019) to pick the most relevant genes to each cell-type cluster. Users may pick a number between 0.3 and 0.5 for best results. The higher the value, the more genes to be excluded from the analysis.
-#' @param markers Character string. A vector containing marker genes
-#'   to be used in decomposition. If NULL is provided, the method will use all available genes for decomposition.
+#' @param markers A character vector containing marker genes
+#'   to be used in decomposition. If NULL provided, the method will use all available genes for decomposition.
 #' @param cell.types Character string. A vector of cell-type labels.
 #' @param subj.names Character string. A vector of individual labels that correspond to cells.
 #' @param verbose Boolean. Whether to print log info during decomposition.

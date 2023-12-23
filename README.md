@@ -17,7 +17,7 @@ devtools::install_github("empiricalbayes/CSCDRNA")
 ```
 
 ## Getting Started
-You can load Bisque as follows:
+You can load CSCDRNA as follows:
 
 ```r
 library(CSCDRNA)

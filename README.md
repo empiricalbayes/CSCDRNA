@@ -5,13 +5,7 @@
 This approach provides accurate cell-type proportion estimation by incorporating covariance structure in a given set of single-cell RNA-seq (scRNA-seq) and bulk RNA-seq datasets, see Karimnezhad (2022). The approach uses an extension of the transformation used in Jew et al. (2020).
 
 ## Installation
-
-The R package is available on CRAN
-```r
-install.packages("CSCDRNA")
-```
-
-The package can also be installed from the GitHub repository
+The package can be installed from the GitHub repository
 ```r
 devtools::install_github("empiricalbayes/CSCDRNA")
 ```

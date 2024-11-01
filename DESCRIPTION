@@ -9,7 +9,7 @@ Description: Provides accurate cell type proportion estimation by incorporating 
 License: GPL-3
 Encoding: UTF-8
 biocViews: MAST
-Imports: nlshrink, limSolve, Biobase, BisqueRNA, methods, plyr, Seurat, MAST
+Imports: nlshrink, limSolve, Biobase, BisqueRNA, methods, plyr, Seurat, MAST, Matrix
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: 

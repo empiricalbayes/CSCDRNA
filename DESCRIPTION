@@ -1,6 +1,6 @@
 Package: CSCDRNA
 Title: Covariance Based Single-Cell Decomposition of Bulk Expression Data
-Version: 1.0.3
+Version: 2.0.1
 Authors@R: c(person("Ali", "Karimnezhad", role = c("aut", "cre", "ctb"),
                     email = "ali.karimnezhad@gmail.com"))
 Author: Ali Karimnezhad [aut, cre, ctb]
@@ -9,13 +9,13 @@ Description: Provides accurate cell type proportion estimation by incorporating 
 License: GPL-3
 Encoding: UTF-8
 biocViews: MAST
-Imports: nlshrink, limSolve, Biobase, BisqueRNA, methods, plyr, Seurat, MAST, Matrix
+Imports: nlshrink, limSolve, Biobase, BisqueRNA, methods, plyr, Seurat, MAST, SeuratObject, Matrix
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 Suggests: 
   testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Depends: 
-  R (>= 4.0)
+  R (>= 4.4)
 LazyData: true
 BugReports: https://github.com/empiricalbayes/CSCDRNA/issues

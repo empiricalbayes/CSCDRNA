@@ -268,31 +268,42 @@ CSCD<-function(bulk.eset, sc.eset,min.p=NULL,markers=NULL,
   else {
     markers <- base::unique(base::unlist(markers))
   }
-
-
+  
+  
   if (base::is.null(min.p)) {
     min.p <- 0.5
   }
-
+  
   test.use =  'MAST'# 'bimod'#"roc"#
   sc_raw=exprs(sc.eset)
-  sc <- Seurat::CreateSeuratObject(counts = sc_raw)
+  
+  # added to make it work with Seurat v5
+  B=Biobase::exprs(sc.eset) 
+  C <- Matrix(B, sparse = TRUE)   
+  sc <- Seurat::CreateSeuratObject(counts = C)
+  ###
   sc$replicate <- sc.eset$SubjectName
-  Idents(sc)<-as.character(sc.eset$cellType)
+  Seurat::Idents(sc)<-as.character(sc.eset$cellType)
   id=unique(sc.eset$cellType)
-
+  
+  # added to make it work with Seurat v5
+  sc[["data"]] <- SeuratObject::JoinLayers(sc[["RNA"]])
+  DefaultAssay(sc) <- "data"
+  sc[["data"]]$data <- (sc[["RNA"]]$counts)
+  #sc
+  
   markers.identified=Seurat::FindAllMarkers(object = sc,test.use = test.use,only.pos = T,min.diff.pct = min.p,min.pct = 0,pseudocount.use = .01)
   markers.identified=FindAllMarkers_filter.by.cluster(markers.identified)
   g.w.PT=rownames(markers.identified)
   sc.eset=sc.eset[which(rownames(sc.eset)%in%g.w.PT),]
-
+  
   genes <- GetOverlappingGenes(sc.eset, bulk.eset, markers, verbose)
   if (verbose) {
     base::message("Converting single-cell counts to CPM and ",
                   "filtering zero variance genes.")
   }
-
-
+  
+  
   sc.eset <- CountsToCPM(sc.eset)
   sc.eset <-Biobase::ExpressionSet(assayData=Biobase::exprs(sc.eset)[genes,],
                                    phenoData=sc.eset@phenoData)
@@ -304,7 +315,7 @@ CSCD<-function(bulk.eset, sc.eset,min.p=NULL,markers=NULL,
   bulk.eset <- CountsToCPM(bulk.eset)
   bulk.eset <- Biobase::ExpressionSet(assayData=Biobase::exprs(bulk.eset)[genes,],
                                       phenoData=bulk.eset@phenoData)
-
+  
   bulk.eset <- FilterUnexpressedGenes(bulk.eset, verbose)
   genes <- base::intersect(Biobase::featureNames(sc.eset),
                            Biobase::featureNames(bulk.eset))
@@ -320,11 +331,11 @@ CSCD<-function(bulk.eset, sc.eset,min.p=NULL,markers=NULL,
   sc.ref <- GenerateSCReference(sc.eset, cell.types)[genes,,drop=F]
   sc.props <- CalculateSCCellProportions(sc.eset, subj.names, cell.types)
   sc.props <- sc.props[base::colnames(sc.ref),,drop=F]
-
+  
   Z <- GenerateSCReference(sc.eset, cell.types)[genes,,drop=F]
   p <- CalculateSCCellProportions(sc.eset, subj.names, cell.types)
   p <- p[base::colnames(Z),,drop=F]
-
+  
   Y <- Z %*% p
   X <- Biobase::exprs(bulk.eset)[genes,,drop=F]
   sample.names <- base::colnames(Biobase::exprs(bulk.eset))
@@ -357,10 +368,9 @@ CSCD<-function(bulk.eset, sc.eset,min.p=NULL,markers=NULL,
                                                      sol.r <- base::sqrt(sol$solutionNorm)
                                                      return(base::append(sol.p, sol.r))
                                                    }))
-
+  
   rownames( res.multiv.bisque )[n.cell.types+1]<-'rnorm'
   results=list(bulk.props=res.multiv.bisque[1:n.cell.types,],sc.props=p,
                transformed.bulk=X.star.multiv,rnorm=res.multiv.bisque['rnorm',],genes.used=genes)
   return(results)
 }
-

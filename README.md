@@ -66,4 +66,4 @@ analysis$rnorm
 ## References
 Jew, B. et al. (2020) Accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Nat Commun 11, 1971. https://doi.org/10.1038/s41467-020-15816-6
 
-Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. https://www.biorxiv.org/content/10.1101/2022.05.13.491858v1
+Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Bioinformatics Advances, Volume 2, Issue 1, 2022, vbac049. https://doi.org/10.1093/bioadv/vbac049

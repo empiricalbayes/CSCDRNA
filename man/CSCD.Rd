@@ -54,5 +54,5 @@ Jew, B. et al. (2020) Accurate estimation of cell composition in bulk expression
 
 Jew, B. and Alvarez, M. (2020). BisqueRNA: Decomposition of Bulk Expression with Single-Cell Sequencing. R package version, 1.0.5.
 
-Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. https://doi.org/10.1101/2022.05.13.491858
+Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Bioinformatics Advances, Volume 2, Issue 1, 2022, vbac049. https://doi.org/10.1093/bioadv/vbac049
 }

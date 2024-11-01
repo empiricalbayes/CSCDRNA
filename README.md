@@ -53,7 +53,7 @@ analysis$bulk.props
 analysis$sc.props
 
 #The covariance based transformed bulk expression used for decomposition.
-analysis$transformed.bulk.
+analysis$transformed.bulk
 
 #Genes used in the decomposition.
 analysis$genes.used

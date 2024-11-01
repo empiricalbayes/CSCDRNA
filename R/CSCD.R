@@ -223,7 +223,7 @@ FindAllMarkers_filter.by.cluster=function(M){
 #' @references Butler, A. et al. (2019). Seurat: Tools for Single Cell Genomics. R package version, 4.1.1.
 #' @references Jew, B. et al. (2020) Accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Nat Commun 11, 1971. https://doi.org/10.1038/s41467-020-15816-6
 #' @references Jew, B. and Alvarez, M. (2020). BisqueRNA: Decomposition of Bulk Expression with Single-Cell Sequencing. R package version, 1.0.5.
-#' @references Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Bioinformatics Advances, Volume 2, Issue 1, 2022, vbac049. https://doi.org/10.1093/bioadv/vbac049
+#' @references Karimnezhad, A. (2022) More accurate estimation of cell composition in bulk expression through robust integration of single-cell information. Bioinformatics Advances, Volume 2, Issue 1, vbac049. https://doi.org/10.1093/bioadv/vbac049
 #'
 #' @export
 CSCD<-function(bulk.eset, sc.eset,min.p=NULL,markers=NULL,

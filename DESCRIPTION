@@ -5,7 +5,7 @@ Authors@R: c(person("Ali", "Karimnezhad", role = c("aut", "cre", "ctb"),
                     email = "ali.karimnezhad@gmail.com"))
 Author: Ali Karimnezhad [aut, cre, ctb]
 Maintainer: Ali Karimnezhad <ali.karimnezhad@gmail.com>
-Description: Provides accurate cell type proportion estimation by incorporating covariance structure in both single-cell and bulk RNA-seq datasets into the analysis. For more detail, see Karimnezhad, A. (2022) <doi:10.1101/2022.05.13.491858>.
+Description: Provides accurate cell type proportion estimation by incorporating covariance structure in both single-cell and bulk RNA-seq datasets into the analysis. For more detail, see Karimnezhad, A. (2022) <https://doi.org/10.1093/bioadv/vbac049>.
 License: GPL-3
 Encoding: UTF-8
 biocViews: MAST
